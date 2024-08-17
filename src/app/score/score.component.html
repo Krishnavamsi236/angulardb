@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS (optional) -->
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light grey background color */
+        }
+        .container {
+            background-color: #ffffff; /* White background for the form container */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding: 20px;
+            max-width: 600px; /* Set max width for the container */
+            margin-top: 50px; /* Space from the top */
+        }
+        h1 {
+            margin-bottom: 30px; /* Space below the header */
+        }
+        .btn-primary {
+            background-color: #007bff; /* Primary button background color */
+            border-color: #007bff; /* Border color to match the button */
+        }
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            border-color: #004085; /* Darker border on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Score Submission</h1>
+    <form>
+        <div class="form-group">
+            <label for="rollNumber">Roll Number</label>
+            <input type="text" class="form-control" id="rollNumber" name="roll_number" placeholder="Enter your roll number" required>
+        </div>
+        <div class="form-group">
+            <label for="score">Score</label>
+            <input type="number" class="form-control" id="score" name="score" placeholder="Enter your score" min="0" max="100" required>
+        </div>
+        <button type="submit" class="btn btn-success"><a routerLink="/placements">Submit</a></button>
+    </form>
+</div>
+<router-outlet></router-outlet>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
